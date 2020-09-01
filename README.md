@@ -1,8 +1,8 @@
 # Spaces Python Backend
 
-Framework -> Flask (python) 
-DB -> MongoDB 
-Cloud Provider -> Heroku (Master from this repo is deployed)
+1. Framework -> Flask (python) 
+2. DB -> MongoDB 
+3. Cloud Provider -> Heroku (Master from this repo is deployed)
 
 #Accessing the database
 1. Download MongoDB compass app (desktop client)

@@ -10,4 +10,6 @@
 3. Thats it
 
 #also displaying credentials both here and in the code is unsecure so be sure to remove this for prod
+#change ip addresses to access from on compass for increases security
+
 

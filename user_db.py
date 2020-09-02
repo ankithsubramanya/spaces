@@ -1,5 +1,6 @@
 import json
 import pymongo
+from bson import ObjectId
 from pymongo import MongoClient
 
 import Constants
@@ -57,7 +58,8 @@ def update_user_by_email(email, update_string):  # update one param at a time
 def delete_user_by_email(email):  # delete many functionality can be added later if needed
     db = get_db()
     user = db.user
-    user.delete_one({"email: " + email})
+    user_id = get_user_id_from_email(email)
+    user.delete_one({"_id": ObjectId(user_id)})
 
 
 # Secondary requests - nice to have
@@ -89,6 +91,6 @@ print(email_exists("firstuser@mail.com"))
 
 print(email_exists("seconduser@mail.com"))
 
-#delete_user_by_email("firstuser@mail.com")
+delete_user_by_email("firstuser@mail.com")
 
 print(email_exists("firstuser@mail.com"))

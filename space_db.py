@@ -71,27 +71,3 @@ def find_spaces_by_json_filter(json_filter):
     res = space.find(json_filter)
     return res
 
-
-print(add_space({
-    "first_name": "first",
-    "last_name": "space",
-    "space_id": "firstspace@mail.com",
-    "company": "firstcompany",
-    "location": "Champaign"
-}))
-
-print(get_object_id_from_space_id("firstspace@mail.com"))
-
-print(find_space_by_space_id("firstspace@mail.com"))
-
-update_space_by_space_id("firstspace@mail.com", {"first_name": "hey"})
-
-print(find_space_by_space_id("firstspace@mail.com"))
-
-print(space_id_exists("firstspace@mail.com"))
-
-print(space_id_exists("secondspace@mail.com"))
-
-delete_space_by_space_id("firstspace@mail.com")
-
-print(space_id_exists("firstspace@mail.com"))
